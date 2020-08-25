@@ -7,7 +7,6 @@ import com.gnss.core.model.DownCommandInfo;
 import com.gnss.core.service.IDownCommandMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.reflections.Reflections;
-import org.springframework.boot.CommandLineRunner;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,7 +23,7 @@ import java.util.Map;
  * @date 2018-9-14
  */
 @Slf4j
-public class DownCommandRegister implements CommandLineRunner {
+public class DownCommandRegister {
 
     /**
      * 扫描注解的包前缀
@@ -38,10 +37,6 @@ public class DownCommandRegister implements CommandLineRunner {
 
     public DownCommandRegister(String scanPrefix) {
         this.scanPrefix = scanPrefix;
-    }
-
-    @Override
-    public void run(String... args) throws Exception {
         Reflections reflections = new Reflections(scanPrefix);
         reflections.getTypesAnnotatedWith(DownCommand.class).stream()
                 .filter(IDownCommandMessage.class::isAssignableFrom)

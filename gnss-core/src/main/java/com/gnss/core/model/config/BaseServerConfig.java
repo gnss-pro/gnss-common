@@ -21,6 +21,11 @@ public class BaseServerConfig {
     private String nodeName;
 
     /**
+     * 版本号
+     */
+    private String version;
+
+    /**
      * 服务器名称
      */
     private String serverName;
