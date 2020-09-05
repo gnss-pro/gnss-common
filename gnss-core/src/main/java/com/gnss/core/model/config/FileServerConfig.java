@@ -21,7 +21,7 @@ public class FileServerConfig extends BaseServerConfig {
     private Map<String, String> supportedMessage;
 
     /**
-     * HTTP端口
+     * HTTP端口,处理文件的播放、下载
      */
     private int httpPort;
 

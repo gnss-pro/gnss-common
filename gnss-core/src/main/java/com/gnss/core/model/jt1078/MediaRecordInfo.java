@@ -2,6 +2,7 @@ package com.gnss.core.model.jt1078;
 
 import com.gnss.core.constants.MediaDataTypeEnum;
 import com.gnss.core.constants.jt1078.RecordActionEnum;
+import com.gnss.core.constants.jt1078.StreamTypeEnum;
 import com.gnss.core.proto.TerminalProto;
 import lombok.Data;
 
@@ -36,12 +37,12 @@ public class MediaRecordInfo {
     /**
      * 数据类型
      */
-    private MediaDataTypeEnum avItemType;
+    private MediaDataTypeEnum dataType;
 
     /**
      * 码流类型(0:主码流,1:子码流)
      */
-    private Integer streamType;
+    private StreamTypeEnum streamType;
 
     /**
      * 流地址
