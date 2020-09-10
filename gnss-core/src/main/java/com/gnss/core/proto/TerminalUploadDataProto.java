@@ -27,7 +27,7 @@ public class TerminalUploadDataProto implements Serializable {
     private TerminalProto terminalInfo;
 
     /**
-     * 报警动作
+     * 上传类型
      */
     @Protobuf(fieldType = FieldType.ENUM, order = 2, required = true)
     private UploadDataTypeEnum uploadDataType;
